@@ -1,12 +1,7 @@
 # fuindicado
 
 ##Tecnologias usadas até o momento
-Java/Spring
-Jpa
-Rest
-Tomcat
-H2
-json
+Java/Spring, Jpa, Rest, Tomcat, H2 e json.
 
 ##Ferramenta
 Spring Tool Suite

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="bootstrap/css/simple-sidebar.css" >-->
+	<link rel="stylesheet" type="text/css" href="cadastro.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<div class="page-content">
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" 
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="img/logo2.png" class="img-responsive center-block" width="200" height="80">	
+				</div>
+
+				<div class="collapse navbar-collapse" id="collapse-navbar" >
+					
+					<ul class="nav navbar-nav navbar-right">
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+				          	aria-expanded="false">fulano@gmail.com <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				          </ul>
+				        </li>
+			      	</ul>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section id="create-user" class="content">
+
+       <div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-3 sidebar">
+				<div class="list-group">
+				  <a href="#" class="list-group-item">Configurações</a>
+				  <a href="#" class="list-group-item">Meus serviços</a>
+				  <a href="#" class="list-group-item">Contatos</a>
+				  <a href="#" class="list-group-item">Contas</a>
+				</div>
+			</div>
+			<div class="col-md-9 grid-right">
+
+				<div class="panel panel-primary panel-md-size center-block">
+					<div class="panel-heading">Cadastro de Fornecedor</div>
+		  			<div class="panel-body">	
+							<form>
+							 <div class="form-group">
+							    <label for="exampleInputEmail1">Nome</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome">
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">Endereço</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Endereço">
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">CPF</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CPF">
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">Email</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputPassword1">Senha</label>
+							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+							  </div>
+							  <div class="form-group">
+							  	<label for="exampleInputProfissional">Profissão</label>
+							  	<select class="form-control" id="exampleInputProfissional">
+								  <option>Pedreiro</option>
+								  <option>Carpinteiro</option>
+								  <option>Mecânico</option>
+								  <option>Soldador</option>
+								  <option>Tecnico de informatica</option>
+								</select>
+							  </div>
+							  <div class="form-group">
+							  	<label for="exampleInputDescription">Descrição</label>
+							  	<textarea class="form-control" rows="3" id="exampleInputDescription"></textarea>
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputFile">Foto</label>
+							    <input type="file" id="exampleInputFile">
+							    <p class="help-block">Example block-level help text here.</p>
+							  </div>
+							  <div class="checkbox">
+							    <label>
+							      <input type="checkbox"> Check me out
+							    </label>
+							  </div>
+							  <button type="submit" class="btn btn-default">Submit</button>
+							</form>
+					</div>
+				</div>	
+			</div>
+		  </div>
+	    </div>
+	</section>
+		
+	<footer>
+		<address>
+			<strong>FuIndicado</strong>, 
+			Rua Vergueiro, 3185, Vila Mariana
+			São Paulo, SP
+			Tel: (11) 5571-2751 ou 50833884
+		</address>
+		<address>
+			Quem somos - Área de suporte - Vagas
+		</address>
+
+	</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

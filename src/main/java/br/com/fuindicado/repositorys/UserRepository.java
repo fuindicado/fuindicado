@@ -1,9 +1,9 @@
 package br.com.fuindicado.repositorys;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-import br.com.fuindicado.models.User;
+import br.com.fuindicado.models.Alunos;
 
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface IMongo extends PagingAndSortingRepository<Alunos, Long>{
 
 }

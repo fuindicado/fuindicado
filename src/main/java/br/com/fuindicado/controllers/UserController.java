@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.fuindicado.models.User;
+import br.com.fuindicado.models.UserModel;
 import br.com.fuindicado.services.UserService;
 
 @RestController
@@ -27,7 +27,7 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public User findById(@PathVariable("id") Long id) {
+	public UserModel findById(@PathVariable("id") String id) {
 		
 		return userService.findById(id);
 	
@@ -35,22 +35,29 @@ public class UserController {
 
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Void> save(@Valid @RequestBody User user) {
+	public ResponseEntity<Void> save(@Valid @RequestBody UserModel user) {
 		
 		user.setCreatedDate(new Date());
-		User u = userService.save(user);
+		UserModel userReturned = userService.save(user);
 		
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-							.path("/{id}").buildAndExpand(u.getId()).toUri();
+							.path("/{id}").buildAndExpand(userReturned.getId()).toUri();
 		
 		return ResponseEntity.created(uri).build();
 	}
 	
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<User>> getAll() {
+	public ResponseEntity<List<UserModel>> getAll() {
+		//Teste para inserir um dado!
+		UserModel user = new UserModel("Rafael2", "111111111111112", "13211111112", 
+				"Endereço teste2", "1111111111112", "teste2@teste.com", 
+				"rafael2", "teste2", new Date());
 		
-		List<User> users = userService.getAll();
+		UserModel userReturned = userService.save(user);
+		//Fim do teste!
+		
+		List<UserModel> users = userService.getAll();
 		
 		return ResponseEntity.status(HttpStatus.OK).body(users);
 	}

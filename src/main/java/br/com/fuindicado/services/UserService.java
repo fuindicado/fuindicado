@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.fuindicado.models.User;
+import br.com.fuindicado.models.UserModel;
 import br.com.fuindicado.repositorys.UserRepository;
 
 @Service
@@ -16,15 +16,15 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	public User save(User user) {
+	public UserModel save(UserModel user) {
 		return userRepository.save(user);
 	}
 	
-	public List<User> getAll() {
-		return userRepository.findAll();
+	public List<UserModel> getAll() {
+		return (List<UserModel>) userRepository.findAll();
 	}
 	
-	public User findById(Long id) {
+	public UserModel findById(String id) {
 		return userRepository.findOne(id);
 	}
 	
